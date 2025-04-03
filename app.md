@@ -44,3 +44,9 @@ Retornar em uma API REST (json) o nome do podcast, nome do episódio, imagem de 
 },
 ]
 ```
+
+## Tecnologias utilizadas:
+
+- NodeJS
+- Typescript
+- Postman
