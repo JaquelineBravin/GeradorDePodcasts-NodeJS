@@ -3,7 +3,9 @@
 
 import { IncomingMessage, ServerResponse } from 'http';
 import { serviceListEpisodes } from '../services/list-episodes-service';
+import { serviceFilterEpisodes } from '../services/filter-episodes-services';
 
+//trás toda a lista
 export const getListEpisodes = async (
   req: IncomingMessage,
   res: ServerResponse
@@ -17,4 +19,14 @@ export const getListEpisodes = async (
     // O JSON.stringify transforma o objeto em texto, e o JSON.parse transforma o texto em objeto
     JSON.stringify(content)
   );
+};
+
+// filtra a lista
+export const getFilterEpisodes = async (
+  req: IncomingMessage,
+  res: ServerResponse
+) => {
+  const content = await serviceFilterEpisodes('AssombradO.com.br');
+  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify(content));
 };

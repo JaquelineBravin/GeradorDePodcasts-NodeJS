@@ -45,6 +45,10 @@ Retornar em uma API REST (json) o nome do podcast, nome do episódio, imagem de 
 ]
 ```
 
+### Métodos
+
+- GET: Retorna lista de episódios baseado em um parametro enviado pelo cliente do nome do podcast
+
 ## Tecnologias utilizadas:
 
 - NodeJS
