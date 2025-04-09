@@ -11,7 +11,7 @@ const server = http.createServer(
 
     // A base da url e a queryString são separadas por '?', e como isso pode ser nulo, eu coloco um valor padrão
     // Se não tiver nada, o valor padrão é uma string vazia
-    const [baseUrl, queryString] = req.url?.split('?') ?? ['', ''];
+    const [baseUrl, queryString] = req.url?.split('?') || ['', ''];
     console.log(baseUrl);
     console.log(queryString);
 
