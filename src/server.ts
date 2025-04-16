@@ -7,6 +7,7 @@ import { Routes } from './routes/routes';
 import { HttpMethod } from './utils/http-methods';
 
 const server = http.createServer(
+  // req: é o que está sendo enviado pro servidor, e res: é o que o servidor vai responder/enviar
   async (req: http.IncomingMessage, res: http.ServerResponse) => {
     // queryString
     //http://localhost:3000/api/episode?p=AssombradO.com.br
