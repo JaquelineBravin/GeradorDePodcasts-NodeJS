@@ -38,6 +38,6 @@ export const getFilterCategory = async (
   res: ServerResponse
 ) => {
   const content = await serviceFilterCategory(req.url);
-  res.writeHead(StatusCode.OK, { 'Content-Type': ContentType.JSON });
-  res.end(JSON.stringify(content));
+  res.writeHead(content.statusCode, { 'Content-Type': ContentType.JSON });
+  res.end(JSON.stringify(content.body));
 };
