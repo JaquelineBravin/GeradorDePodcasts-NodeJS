@@ -3,5 +3,5 @@ export interface IPodcast {
   episode: string;
   videoId: string;
   link: string;
-  category: string[];
+  category: string;
 }
